@@ -1,11 +1,12 @@
-package com.example.apisampleapp.ui
-
-import com.example.apisampleapp.ui.model.Item
+package com.example.apisampleapp.ui.theme
 
 data class InvestUiState(
-    val query: String = "Apple",
-    val items: List<Item> = emptyList(),
-    val loading: Boolean? = false,
-    val error: Throwable? = null,
-    val orderResult: String? = null
+    val query: String = "",
+    val instruments: List<Instrument> = emptyList(),
+    val isLoading: Boolean = false
+)
+
+data class Instrument(
+    val title: String,
+    val subtitle: String
 )
